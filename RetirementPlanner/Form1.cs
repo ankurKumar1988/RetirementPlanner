@@ -68,7 +68,7 @@ namespace RetirementPlanner
             try
             {
                 //Database settings  
-                string MyConnection2 = "datasource=localhost;port=3306;username=root;password=mechanics";
+                string MyConnection2 = "datasource=localhost;port=3306;username=<enter username>;password=<enter password>";
                 //Frame SQL query  
                 string Query = "insert into retirement_planner.plan_history(current_annual_income,pct_aanual_increase,pct_income_saved,pct_income_comatched,pct_income_saved_annual_increment,pct_expected_rate_of_return,years_to_retirement,current_savings,net_savings_upon_retirement) " +
                                                                "values('" + annIncome.Text + "','" + Pct_annIncrease.Text + "','" + Pct_IncomeSaved.Text + "','" + Pct_incomeMatch.Text + "','" + Pct_IncomeSaved_incr.Text + "','" + Expected_ror.Text + "','" + year_2_retire.Text + "','" + Current_savings.Text + "','" + Curr_savings.ToString() + "');";
@@ -89,7 +89,7 @@ namespace RetirementPlanner
         private void delete_entry_Click(object sender, EventArgs e)
         {
             //open database connection
-            string MyConnection2 = "datasource=localhost;port=3306;username=root;password=mechanics";
+            string MyConnection2 = "datasource=localhost;port=3306;username=<enter username>;password=<enter password>";
             MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
             MySqlCommand MyCommand2;
             MySqlDataReader MyReader2;
@@ -131,7 +131,7 @@ namespace RetirementPlanner
             try
             {
                 //Database settings  
-                string MyConnection2 = "datasource=localhost;port=3306;username=root;password=mechanics";
+                string MyConnection2 = "datasource=localhost;port=3306;username=<enter username>;password=<enter password>";
                 //Frame SQL query  
                 string Query = "select * from retirement_planner.plan_history";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
